@@ -5,7 +5,20 @@ const emailsOut = document.getElementById("emails-out");
 const endPoint = "https://flynn.boolean.careers/exercises/api/random/mail";
 
 
-generateTenMails();
+const myMailList = generateTenMails();
+writeArrayInPage();
+
+
+function writeArrayInPage(){
+    for (let i = 0; i < 10; i++){
+        let newLi = document.createElement("li");
+        newLi.innerText = i;
+        emailsOut.appendChild(newLi);
+    }
+}
+
+
+
 
 
 
