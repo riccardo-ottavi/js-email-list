@@ -1,11 +1,18 @@
 //seleziono l'out in pagina
 const emailsOut = document.getElementById("emails-out");
-
+const runBtn = document.getElementById("run-btn")
 //seleziono end point di boolean
 const endPoint = "https://flynn.boolean.careers/exercises/api/random/mail";
 
 //chiamo la funzione che genera le 10 mail assegnando il tutto a una const
-const myMailList = generateTenMails();
+
+
+runBtn.addEventListener("click",
+    function(){
+    const myMailList = generateTenMails();
+    }
+)
+
 
 function generateTenMails() {
 let result = [];
