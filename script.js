@@ -3,6 +3,13 @@ const emailsOut = document.getElementById("emails-out");
 
 //seleziono end point di boolean
 const endPoint = "https://flynn.boolean.careers/exercises/api/random/mail";
+
+
+generateTenMails();
+
+
+
+function generateTenMails() {
 let result = [];
 //richiedo le mail e intanto le stampo in console
 for (let i = 0; i < 10; i++){
@@ -16,5 +23,9 @@ for (let i = 0; i < 10; i++){
             //in caso di errore
             console.error(error);
         })
+    }
+    console.log(result); 
+    return result
 }
-console.log(result);  
+
+
