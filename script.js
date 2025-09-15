@@ -3,15 +3,18 @@ const emailsOut = document.getElementById("emails-out");
 
 //seleziono end point di boolean
 const endPoint = "https://flynn.boolean.careers/exercises/api/random/mail";
-
+let result = [];
 //richiedo le mail e intanto le stampo in console
-axios.get(endPoint)
-    .then(risposta => {
-        //in caso di successo
-        const result = risposta.data.response;
-        console.log(result);
-    })
-    .catch(error =>{
-        //in caso di errore
-        console.error(error);
-    })
+for (let i = 0; i < 10; i++){
+    axios.get(endPoint)
+        .then(risposta => {
+            //in caso di successo
+            let randomMail = risposta.data.response;
+            result.push(randomMail);
+        })
+        .catch(error =>{
+            //in caso di errore
+            console.error(error);
+        })
+}
+console.log(result);  
