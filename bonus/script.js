@@ -9,6 +9,7 @@ const endPoint = "https://flynn.boolean.careers/exercises/api/random/mail";
 
 runBtn.addEventListener("click",
     function(){
+    emailsOut.innerText = "";
     const myMailList = generateTenMails();
     }
 )
