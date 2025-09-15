@@ -5,14 +5,32 @@
 }
 
 body {
-    background-color: rgb(186, 186, 255);
-    color: white;
+    background-color: rgb(150, 150, 209);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color:rgb(129, 129, 180);
+}
+
+button {
+    padding: 5px;
+    border-radius: 2%;
 }
 
 #main-box {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     text-align: center;
+    background-color: rgb(238, 238, 238);
+    height: 510px;
+    margin-top: 130px;
+    border-radius: 2%;
+}
+
+#main-box *{
+    margin-bottom: 10px;
 }
 
 ul{
